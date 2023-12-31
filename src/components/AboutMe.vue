@@ -15,7 +15,15 @@ export default {
 </script>
 
 <template>
-  <h1>{{ title }}</h1>
+  <div class="wrapper">
+    <div class="container">
+      <h1>{{ title }}</h1>
+    </div>
+  </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.wrapper {
+  height: 100vh;
+}
+</style>

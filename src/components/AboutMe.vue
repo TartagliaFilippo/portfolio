@@ -4,7 +4,7 @@
 export default {
   data() {
     return {
-      title: "AboutMe",
+      title: "AboutMe Titolo",
     };
   },
 
@@ -17,13 +17,19 @@ export default {
 <template>
   <div class="wrapper">
     <div class="container">
-      <h1>{{ title }}</h1>
+      <h2 class="text-center">{{ title }}</h2>
+      <div class="content-subtitle">
+        <p class="text-center">varie cose</p>
+        <p class="text-center">varie cose</p>
+        <p class="text-center">varie cose</p>
+        <p class="text-center">varie cose</p>
+      </div>
+      <div class="btn btn-primary">link git</div>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .wrapper {
-  height: 100vh;
 }
 </style>

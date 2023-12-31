@@ -3,6 +3,7 @@ export default {
   data() {
     return {
       title: "I Miei Progetti",
+      projects: [1, 2, 3],
     };
   },
 };
@@ -13,11 +14,15 @@ export default {
     <div class="container">
       <h1>{{ title }}</h1>
       <p class="subtitle">scrivo qualcosa riguardo ai miei progetti</p>
-      <div class="card-project">
-        <div class="left-section">
+      <div
+        v-for="(project, index) in projects"
+        :key="index"
+        class="card-project"
+      >
+        <div class="image-section">
           <img src="" alt="" />
         </div>
-        <div class="right-section">
+        <div class="content-section">
           <h3>Progetto</h3>
           <p>descrizione progetto</p>
           <div class="technology">
@@ -33,17 +38,27 @@ export default {
 <style lang="scss" scoped>
 .wrapper {
   height: 100vh;
+  margin: 100px 0 50px 0;
 
   .card-project {
     display: flex;
-    flex-direction: row;
     padding-bottom: 1rem;
     border-bottom: 1px dashed black;
-    .left-section {
-      width: 40%;
+
+    &:nth-child(odd) {
+      flex-direction: row;
     }
-    .right-section {
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .image-section {
+      width: 40%;
+      border: 1px solid green;
+    }
+    .content-section {
       width: 60%;
+      border: 1px solid red;
     }
   }
 }

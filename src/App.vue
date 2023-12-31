@@ -7,9 +7,7 @@ import Footer from "./components/ui/Footer.vue";
 
 export default {
   data() {
-    return {
-      title: "Il gestionale",
-    };
+    return {};
   },
 
   components: {
@@ -23,7 +21,6 @@ export default {
 </script>
 
 <template>
-  <h1>{{ title }}</h1>
   <Welcome></Welcome>
   <Navbar></Navbar>
   <Projects></Projects>

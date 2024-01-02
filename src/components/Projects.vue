@@ -51,10 +51,14 @@ export default {
 </script>
 
 <template>
-  <div class="wrapper">
+  <div class="wrapper" id="projects">
     <div class="container">
       <h1>{{ title }} &#128205;</h1>
-      <p class="subtitle">scrivo qualcosa riguardo ai miei progetti</p>
+      <p class="subtitle">
+        Benvenuti nel mio portfolio! Qui troverete una varietà di progetti che
+        coprono diverse tecnologie e framework, che ho utilizzato dall'inizio
+        del mio percorso
+      </p>
       <div v-for="project in projects" :key="project.id" class="card-project">
         <div class="image-section">
           <img src="" alt="" />

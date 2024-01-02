@@ -16,7 +16,7 @@ export default {
         <h1 class="title">Full Stack Web Developer</h1>
         <h2 class="subtitle">Qualcosa da implementare</h2>
         <div class="scroll-button">
-          <a href=""><font-awesome-icon icon="arrow-down" />scorri </a>
+          <a href="#projects"><font-awesome-icon icon="arrow-down" />scorri </a>
         </div>
       </div>
     </div>

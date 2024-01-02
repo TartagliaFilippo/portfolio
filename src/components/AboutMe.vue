@@ -25,7 +25,7 @@ export default {
       xmlns="http://www.w3.org/2000/svg"
     >
       <defs>
-        <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+        <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="0" y2="0">
           <stop stop-color="#c7a991" offset="0%" />
           <stop stop-color="#c7a991" offset="100%" />
         </linearGradient>
@@ -37,7 +37,7 @@ export default {
       />
     </svg>
   </div>
-  <div class="wrapper">
+  <div class="wrapper" id="AboutMe">
     <div class="container">
       <h2 class="text-center">
         {{ title }}
@@ -69,7 +69,7 @@ export default {
       xmlns="http://www.w3.org/2000/svg"
     >
       <defs>
-        <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+        <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="0" y2="0">
           <stop stop-color="#c7a991" offset="0%" />
           <stop stop-color="#c7a991" offset="100%" />
         </linearGradient>

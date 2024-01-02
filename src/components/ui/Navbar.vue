@@ -29,10 +29,12 @@ export default {
       >
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Projects</a>
+            <a class="nav-link active" aria-current="page" href="#Projects"
+              >Projects</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">AboutMe</a>
+            <a class="nav-link" href="#AboutMe">AboutMe</a>
           </li>
           <li class="nav-item dropdown">
             <a
@@ -42,11 +44,11 @@ export default {
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Settings
+              <font-awesome-icon :icon="['fas', 'gear']" />
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">first color</a></li>
+              <li><a class="dropdown-item" href="#">second color</a></li>
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
           </li>
@@ -63,5 +65,9 @@ export default {
   left: 0;
   right: 0;
   z-index: 10;
+}
+
+.dropdown-menu[data-bs-popper] {
+  left: -120px;
 }
 </style>

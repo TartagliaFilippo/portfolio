@@ -12,11 +12,18 @@ export default {
   <div class="wrapper">
     <div class="container">
       <div class="header-text">
-        <span class="author-name">Filippo Tartaglia</span>
-        <h1 class="title">Full Stack Web Developer</h1>
-        <h2 class="subtitle">Qualcosa da implementare</h2>
+        <div class="main-content">
+          <span class="author-name">Filippo Tartaglia</span>
+          <h1 class="title">Full Stack Web Developer</h1>
+          <h2 class="subtitle">
+            <p>Architetto Digitale:</p>
+            <p>Costruendo il Futuro, Linea di Codice per Linea di Successo</p>
+          </h2>
+        </div>
         <div class="scroll-button">
-          <a href="#projects"><font-awesome-icon icon="arrow-down" />scorri </a>
+          <a href="#projects"
+            ><font-awesome-icon icon="arrow-down" /> scorri
+          </a>
         </div>
       </div>
     </div>
@@ -27,17 +34,20 @@ export default {
 @use "../assets/scss/variables.scss" as *;
 .wrapper {
   height: 110vh;
-  background: linear-gradient(0deg, $shade-100 50%, $background-color 50%);
+  background: linear-gradient(0deg, $shade-100 52%, $background-color 50%);
   .container {
     height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
     .header-text {
       height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      .main-content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
     }
   }
 }

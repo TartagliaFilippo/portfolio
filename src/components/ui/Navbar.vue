@@ -11,7 +11,7 @@ export default {
 <template>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Filippo Tartaglia</a>
+      <a class="navbar-brand" href="#welcome">Filippo Tartaglia</a>
       <button
         class="navbar-toggler"
         type="button"

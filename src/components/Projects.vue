@@ -113,10 +113,12 @@ export default {
         padding: 3px 8px;
         border-radius: 5px;
         margin-bottom: 20px;
+        box-shadow: 1px 1px black;
 
         &:hover {
           background-color: $shade-100;
           color: $grey-color;
+          box-shadow: 0 0 black;
 
           a {
             color: $shade-300;

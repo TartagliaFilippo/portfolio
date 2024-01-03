@@ -17,6 +17,10 @@ export default {
     AboutMe,
     Footer,
   },
+
+  created() {
+    window.scroll(0, 0);
+  },
 };
 </script>
 

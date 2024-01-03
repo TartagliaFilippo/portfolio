@@ -134,6 +134,8 @@ export default {
     }
     .image-section {
       width: 40%;
+      display: flex;
+      align-items: center;
     }
     .content-section {
       width: 60%;

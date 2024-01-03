@@ -50,7 +50,7 @@ export default {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <font-awesome-icon :icon="['fab', 'octopus-deploy']" />
       </button>
       <div
         class="collapse navbar-collapse justify-content-end"
@@ -118,10 +118,16 @@ export default {
     box-shadow: inset 0px -5px 0px 0px $bg-primary;
   }
 }
+.navbar-toggler {
+  color: $bg-primary;
+  border: 1px solid $bg-primary;
+}
+
 .nav-link.dropdown-toggle {
   transition: transform 0.3s ease;
   &:hover {
     transform: rotate(360deg);
+    box-shadow: inset 0px 0px 0px 0px $bg-primary;
   }
 }
 .dropdown-toggle::after {

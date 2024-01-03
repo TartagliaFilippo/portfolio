@@ -130,12 +130,14 @@ export default {
           text-decoration: none;
           position: relative;
           display: inline-block;
+          color: $cl-link-hover;
 
           font-size: 1.5rem;
           transition: transform 0.3s ease-out;
 
           &:hover {
             animation: bounce 1.5s ease infinite;
+            color: $cl-link;
           }
         }
       }

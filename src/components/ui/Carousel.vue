@@ -35,7 +35,9 @@ export default {
       </div>
     </div>
     <div class="buttons">
-      <div class="button-slide" @click="prevSlide">Prev</div>
+      <div class="button-slide" @click="prevSlide">
+        <font-awesome-icon :icon="['fas', 'caret-left']" />
+      </div>
       <div class="thumb-nails">
         <div
           v-for="(image, index) in images"
@@ -43,7 +45,9 @@ export default {
           :class="{ active: index === currentIndex }"
         ></div>
       </div>
-      <div class="button-slide" @click="nextSlide">Next</div>
+      <div class="button-slide" @click="nextSlide">
+        <font-awesome-icon :icon="['fas', 'caret-right']" />
+      </div>
     </div>
   </div>
 </template>
@@ -93,12 +97,15 @@ export default {
       &:hover {
         background-color: $bg-primary;
         color: $bg-primary-300;
+        font-weight: bold;
+        border: 2px solid $bg-primary-500;
       }
     }
     .thumb-nails {
+      width: 50%;
       display: flex;
       flex-direction: row;
-      gap: 20px;
+      justify-content: space-between;
       .thumb {
         height: 1rem;
         width: 1rem;

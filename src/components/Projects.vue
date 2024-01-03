@@ -157,6 +157,7 @@ export default {
       ul {
         list-style-type: none;
         padding-left: 0;
+        font-weight: bold;
         li {
           &::before {
             content: "- ";
@@ -176,6 +177,8 @@ export default {
         &:hover {
           background-color: $bg-primary;
           box-shadow: 0 0 $bg-black;
+          border: 2px solid $bg-primary-500;
+          font-weight: bold;
 
           a {
             color: $bg-primary-300;

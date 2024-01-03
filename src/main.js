@@ -6,14 +6,29 @@ import * as Bootstrap from "bootstrap";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-import { faArrowDown, faGear } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowDown,
+  faGear,
+  faCaretRight,
+  faCaretLeft,
+} from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
   faLinkedin,
   faGoogle,
+  faOctopusDeploy,
 } from "@fortawesome/free-brands-svg-icons";
 
-library.add(faArrowDown, faGithub, faLinkedin, faGoogle, faGear);
+library.add(
+  faArrowDown,
+  faGithub,
+  faLinkedin,
+  faGoogle,
+  faGear,
+  faCaretRight,
+  faCaretLeft,
+  faOctopusDeploy
+);
 
 import App from "./App.vue";
 

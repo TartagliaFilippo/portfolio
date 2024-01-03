@@ -140,6 +140,8 @@ export default {
         background-color: $bg-primary-100;
         color: $bg-primary;
         box-shadow: 0 0 $bg-primary;
+        font-weight: bold;
+        border: 2px solid $bg-primary-500;
 
         a {
           color: $bg-primary-500;

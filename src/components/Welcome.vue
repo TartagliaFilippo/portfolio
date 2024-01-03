@@ -50,7 +50,7 @@ export default {
 @use "../assets/scss/variables.scss" as *;
 .wrapper {
   height: 110vh;
-  background: $background-color;
+  background: $bg-primary;
   overflow: hidden;
   position: relative;
 
@@ -62,7 +62,7 @@ export default {
     width: 100%;
     height: 0%;
     z-index: 0;
-    background: $shade-100;
+    background: $bg-primary-100;
     transition: height 2s linear;
   }
   .container {
@@ -82,7 +82,7 @@ export default {
 
         .author-name {
           font-size: 1.5rem;
-          color: $grey-text;
+          color: $cl-text;
           transform-origin: left;
           transform: perspective(400px) rotateY(90deg);
           opacity: 0;
@@ -99,7 +99,7 @@ export default {
           }
         }
         .title {
-          color: $title-welcome;
+          color: $cl-title;
           position: relative;
           left: 100%;
           animation: slideLeft 1.5s ease forwards;
@@ -113,15 +113,15 @@ export default {
           }
         }
         .subtitle {
-          color: $shade-500;
-          animation: changeColor 4s linear;
+          color: $bg-primary-500;
+          animation: changeColor 3s linear;
         }
         @keyframes changeColor {
           0% {
-            color: $grey-text; /* Colore di partenza */
+            color: $bg-grey;
           }
           100% {
-            color: $shade-500; /* Colore finale */
+            color: $bg-primary-500;
           }
         }
       }

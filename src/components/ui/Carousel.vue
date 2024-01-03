@@ -83,16 +83,16 @@ export default {
     align-items: center;
 
     .button-slide {
-      border: 1px solid $shade-100;
-      background-color: $background-color;
+      border: 1px solid $bg-primary-500;
+      background-color: $bg-primary-300;
       border-radius: 3px;
       padding: 2px 10px;
-      color: $grey-text;
+      color: $bg-primary;
       cursor: pointer;
 
       &:hover {
-        background-color: $shade-100;
-        color: $shade-300;
+        background-color: $bg-primary;
+        color: $bg-primary-300;
       }
     }
     .thumb-nails {
@@ -103,11 +103,10 @@ export default {
         height: 1rem;
         width: 1rem;
         border-radius: 50%;
-        background-color: $grey-text;
+        background-color: $bg-grey;
 
         &.active {
-          background-color: $shade-300;
-          box-shadow: 0px 0px 12px 3px $shade-100;
+          background-color: $bg-primary-500;
         }
       }
     }

@@ -86,15 +86,19 @@ export default {
 <style lang="scss" scoped>
 @use "../assets/scss/variables.scss" as *;
 .svg-top {
-  background-color: #eeeae2;
+  background-color: $bg-primary;
 }
 .wrapper {
-  background-color: $shade-100;
+  background-color: $bg-primary-100;
   .container {
     width: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    h2 {
+      color: $bg-primary-500;
+    }
 
     @keyframes jumpAnimation {
       0%,
@@ -105,6 +109,19 @@ export default {
         transform: translateY(-20px);
       }
     }
+
+    .content-subtitle {
+      color: $cl-text;
+      a {
+        color: $cl-link-hover;
+        text-decoration: none;
+
+        &:hover {
+          color: $cl-link;
+          text-decoration: line-through;
+        }
+      }
+    }
     .jump {
       display: inline-block;
       animation: jumpAnimation 1s infinite;
@@ -112,31 +129,31 @@ export default {
     }
 
     .button {
-      border: 1px solid $shade-500;
-      background-color: $shade-100;
+      border: 1px solid $bg-primary-500;
+      background-color: $bg-primary-300;
       padding: 3px 8px;
       border-radius: 5px;
       margin-bottom: 20px;
-      box-shadow: 1px 1px black;
+      box-shadow: 1px 1px $bg-black;
 
       &:hover {
-        background-color: $shade-300;
-        color: $shade-100;
-        box-shadow: 0 0 black;
+        background-color: $bg-primary-100;
+        color: $bg-primary;
+        box-shadow: 0 0 $bg-primary;
 
         a {
-          color: $shade-100;
+          color: $bg-primary-500;
         }
       }
       a {
         text-decoration: none;
-        color: $grey-text;
+        color: $bg-primary-100;
       }
     }
   }
 }
 .svg-bottom {
   rotate: 180deg;
-  background-color: $footer-color;
+  background-color: $bg-black;
 }
 </style>

@@ -115,15 +115,20 @@ export default {
 <style lang="scss" scoped>
 @use "../assets/scss/variables.scss" as *;
 .wrapper {
-  background-color: $background-color;
+  background-color: $bg-primary;
   padding: 100px 0 50px;
+  color: $cl-text;
+
+  h1 {
+    color: $cl-title;
+  }
 
   .card-project {
     display: flex;
     align-items: stretch;
     padding-bottom: 1rem;
     margin: 1rem;
-    border-bottom: 1px dashed black;
+    border-bottom: 1px dashed $bg-grey;
 
     &:nth-child(odd) {
       flex-direction: row;
@@ -141,6 +146,14 @@ export default {
       width: 60%;
       padding: 0 5px;
 
+      h3 {
+        color: $cl-title;
+      }
+
+      p {
+        color: $cl-text;
+      }
+
       ul {
         list-style-type: none;
         padding-left: 0;
@@ -153,25 +166,24 @@ export default {
 
       .button {
         width: fit-content;
-        border: 1px solid $shade-100;
-        background-color: $background-color;
+        border: 1px solid $bg-primary-500;
+        background-color: $bg-primary-300;
         padding: 3px 8px;
         border-radius: 5px;
         margin-bottom: 20px;
-        box-shadow: 1px 1px black;
+        box-shadow: 1px 1px $bg-black;
 
         &:hover {
-          background-color: $shade-100;
-          color: $grey-color;
-          box-shadow: 0 0 black;
+          background-color: $bg-primary;
+          box-shadow: 0 0 $bg-black;
 
           a {
-            color: $shade-300;
+            color: $bg-primary-300;
           }
         }
         a {
           text-decoration: none;
-          color: $grey-text;
+          color: $bg-primary;
         }
       }
     }

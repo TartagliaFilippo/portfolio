@@ -93,21 +93,30 @@ export default {
   top: 0;
   left: 0;
   right: 0;
-  background-color: $grey-color;
-  color: $title-welcome;
+  background-color: $bg-primary-300;
 }
 .navbar-sticky {
   position: sticky;
   top: 0;
   z-index: 10;
-  background-color: $grey-color;
-  color: $title-welcome;
+  background-color: $bg-primary-300;
 }
-.navbar-brand:hover {
-  box-shadow: inset 0px -10px 0px 0px $shade-500;
+.navbar-brand {
+  color: $bg-primary;
+
+  &:hover {
+    color: $flash-color;
+    //box-shadow: inset 0px -5px 0px 0px $cl-main-title;
+    text-shadow: -1px 1px $cl-main-title;
+  }
 }
-.nav-link:hover {
-  box-shadow: inset 0px -10px 0px 0px $shade-500;
+
+.nav-link {
+  color: $bg-primary;
+
+  &:hover {
+    box-shadow: inset 0px -5px 0px 0px $bg-primary;
+  }
 }
 .nav-link.dropdown-toggle {
   transition: transform 0.3s ease;

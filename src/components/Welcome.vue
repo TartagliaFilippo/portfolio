@@ -114,14 +114,14 @@ export default {
         }
         .subtitle {
           color: $bg-primary-500;
-          animation: changeColor 3s linear;
+          animation: changeColor 2s linear;
         }
         @keyframes changeColor {
           0% {
             color: $bg-grey;
           }
           100% {
-            color: $bg-primary-500;
+            color: $bg-primary;
           }
         }
       }

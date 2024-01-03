@@ -41,7 +41,7 @@ export default {
     <div class="container">
       <h2 class="text-center">
         {{ title }}
-        &#128512;
+        <span class="smile jump">&#128512;</span>
       </h2>
       <div class="content-subtitle">
         <p class="text-center">
@@ -95,6 +95,22 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @keyframes jumpAnimation {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+    .jump {
+      display: inline-block;
+      animation: jumpAnimation 1s infinite;
+      animation-timing-function: ease-in-out;
+    }
+
     .button {
       border: 1px solid $shade-500;
       background-color: $shade-100;

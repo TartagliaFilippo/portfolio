@@ -18,7 +18,7 @@ export default {
           description:
             "Ho creato una riproduzione del layout della rinomata libreria musicale più celebre al mondo, curando attentamente ogni dettaglio dell'interfaccia. Ho sviluppato un template interno che si adatta in modo fluido e intuitivo su diversi dispositivi, garantendo un'esperienza utente ottimale sia su computer che su dispositivi mobili. La mia realizzazione si focalizza sull'estetica accattivante e sull'usabilità intuitiva, assicurando che gli utenti possano esplorare e godere della vasta gamma di contenuti musicali in modo semplice e coinvolgente.",
           technologies: ["HTML", "CSS"],
-          link: "",
+          link: "https://github.com/TartagliaFilippo/html-css-spotifyweb",
         },
         {
           id: 2,
@@ -32,7 +32,7 @@ export default {
           description:
             "In questo primo esercizio pratico di JavaScript, ho creato un sistema di compilazione di form. L'obiettivo principale è consentire all'utente di calcolare il costo del proprio biglietto in base a parametri specifici. La logica implementata prevede una serie di input da parte dell'utente, inclusi dati come l'età per determinare il prezzo del biglietto.",
           technologies: ["HTML", "CSS", "JavaScript"],
-          link: "",
+          link: "https://github.com/TartagliaFilippo/js-biglietto-treno-form",
         },
         {
           id: 3,
@@ -46,7 +46,7 @@ export default {
           description:
             "Nel mio ultimo progetto, ho ricreato con cura e attenzione l'interfaccia della celebre app di messaggistica WhatsApp. Una delle sfide principali è stata l'integrazione dei messaggi scritti nelle diverse chat all'interno della mia rappresentazione dati. Ho creato un sistema che gestisce in modo fluido e immediato l'aggiunta e la visualizzazione di messaggi inviati e ricevuti, consentendo agli utenti di vedere la conversazione prendere vita man mano che i messaggi vengono inseriti. Ho introdotto una funzionalità di ricerca che permette agli utenti di filtrare rapidamente i contatti in base ai loro nomi. Questa funzione ottimizza l'esperienza utente, permettendo di trovare facilmente e rapidamente il contatto desiderato all'interno di una lunga lista.",
           technologies: ["HTML", "CSS", "Vue 3"],
-          link: "",
+          link: "https://github.com/TartagliaFilippo/vue-boolzapp",
         },
         {
           id: 4,
@@ -55,7 +55,7 @@ export default {
           description:
             "Ho replicato la rinomata applicazione Netflix, sfruttando chiamate API per ottenere una vasta gamma di film. L'implementazione si è concentrata sulla ricezione dinamica e organizzata di queste informazioni, classificando accuratamente i film in serie TV e film a sé stanti. Un aspetto cruciale è stato il mapping delle informazioni ricevute dall'API. Ho progettato un sistema che estrae e visualizza le informazioni pertinenti per gli utenti, come le descrizioni dettagliate, le valutazioni e le immagini di copertina dei film. Questo approccio mira a fornire agli utenti una panoramica completa e coinvolgente dei contenuti disponibili, facilitando la loro scelta in base ai propri interessi e preferenze. Per migliorare l'esperienza di navigazione, ho incluso una barra di ricerca intuitiva. Questo strumento consente agli utenti di cercare film specifici in modo rapido e efficiente, offrendo un modo immediato per accedere ai contenuti desiderati senza dover sfogliare un vasto catalogo.",
           technologies: ["HTML", "SCSS", "JavaScript", "Vue 3"],
-          link: "",
+          link: "https://github.com/TartagliaFilippo/vite-boolflix",
         },
         {
           id: 5,
@@ -104,7 +104,7 @@ export default {
             </ul>
           </div>
           <div class="button">
-            <a href="">Codice</a>
+            <a :href="project.link">Codice</a>
           </div>
         </div>
       </div>
@@ -140,6 +140,16 @@ export default {
     .content-section {
       width: 60%;
       padding: 0 5px;
+
+      ul {
+        list-style-type: none; // Rimuove il tipo di elenco predefinito (pallino)
+        padding-left: 0; // Rimuove il padding sinistro predefinito del elenco
+        li {
+          &::before {
+            content: "- "; // Aggiunge un trattino prima di ogni elemento della lista
+          }
+        }
+      }
 
       .button {
         width: fit-content;

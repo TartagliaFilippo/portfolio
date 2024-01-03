@@ -37,7 +37,7 @@ export default {
       />
     </svg>
   </div>
-  <div class="wrapper" id="AboutMe">
+  <div class="wrapper" id="aboutMe">
     <div class="container">
       <h2 class="text-center">
         {{ title }}
@@ -101,10 +101,12 @@ export default {
       padding: 3px 8px;
       border-radius: 5px;
       margin-bottom: 20px;
+      box-shadow: 1px 1px black;
 
       &:hover {
         background-color: $shade-300;
         color: $shade-100;
+        box-shadow: 0 0 black;
 
         a {
           color: $shade-100;

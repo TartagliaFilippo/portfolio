@@ -2,14 +2,43 @@
 export default {
   data() {
     return {
-      title: "Navbar",
+      isSticky: false,
+      lastScrollTop: 0,
     };
+  },
+
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll.bind(this));
+  },
+
+  beforeUnmount() {
+    window.removeEventListener("scroll", this.handleScroll.bind(this));
+  },
+
+  methods: {
+    handleScroll() {
+      let currentScroll = window.scrollY || window.pageYOffset;
+
+      if (currentScroll > this.lastScrollTop) {
+        // Scroll verso il basso
+        this.isSticky = false; // Rendi la navbar non sticky
+      } else {
+        // Scroll verso l'alto
+        this.isSticky = true; // Rendi la navbar sticky
+      }
+
+      this.lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    },
   },
 };
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav
+    class="navbar navbar-expand-lg"
+    :class="{ 'navbar-sticky': isSticky }"
+    ref="navbar"
+  >
     <div class="container-fluid">
       <a class="navbar-brand" href="#welcome">Filippo Tartaglia</a>
       <button
@@ -29,12 +58,12 @@ export default {
       >
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#Projects"
+            <a class="nav-link" aria-current="page" href="#projects"
               >Projects</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#AboutMe">AboutMe</a>
+            <a class="nav-link" href="#aboutMe">AboutMe</a>
           </li>
           <li class="nav-item dropdown">
             <a
@@ -59,15 +88,38 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use "../../assets/scss/variables.scss" as *;
 .navbar {
-  position: sticky;
   top: 0;
   left: 0;
   right: 0;
+  background-color: $grey-color;
+  color: $title-welcome;
+}
+.navbar-sticky {
+  position: sticky;
+  top: 0;
   z-index: 10;
+  background-color: $grey-color;
+  color: $title-welcome;
+}
+.navbar-brand:hover {
+  box-shadow: inset 0px -10px 0px 0px $shade-500;
+}
+.nav-link:hover {
+  box-shadow: inset 0px -10px 0px 0px $shade-500;
+}
+.nav-link.dropdown-toggle {
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: rotate(360deg);
+  }
+}
+.dropdown-toggle::after {
+  display: none;
 }
 
 .dropdown-menu[data-bs-popper] {
-  left: -120px;
+  left: -135px;
 }
 </style>

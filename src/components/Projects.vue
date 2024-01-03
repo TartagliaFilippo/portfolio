@@ -142,11 +142,11 @@ export default {
       padding: 0 5px;
 
       ul {
-        list-style-type: none; // Rimuove il tipo di elenco predefinito (pallino)
-        padding-left: 0; // Rimuove il padding sinistro predefinito del elenco
+        list-style-type: none;
+        padding-left: 0;
         li {
           &::before {
-            content: "- "; // Aggiunge un trattino prima di ogni elemento della lista
+            content: "- ";
           }
         }
       }

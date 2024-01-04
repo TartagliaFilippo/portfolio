@@ -115,12 +115,12 @@ export default {
 <style lang="scss" scoped>
 @use "../assets/scss/variables.scss" as *;
 .wrapper {
-  background-color: $bg-primary;
+  background-color: var(--bg-primary);
   padding: 100px 0 50px;
-  color: $cl-text;
+  color: var(--cl-text);
 
   h1 {
-    color: $cl-title;
+    color: var(--cl-title);
   }
 
   .card-project {
@@ -128,7 +128,7 @@ export default {
     align-items: stretch;
     padding-bottom: 1rem;
     margin: 1rem;
-    border-bottom: 1px dashed $bg-grey;
+    border-bottom: 1px dashed var(--bg-grey);
 
     &:nth-child(odd) {
       flex-direction: row;
@@ -147,11 +147,11 @@ export default {
       padding: 0 5px;
 
       h3 {
-        color: $cl-title;
+        color: var(--cl-title);
       }
 
       p {
-        color: $cl-text;
+        color: var(--cl-text);
       }
 
       ul {
@@ -167,26 +167,26 @@ export default {
 
       .button {
         width: fit-content;
-        border: 1px solid $bg-primary-500;
-        background-color: $bg-primary-300;
+        border: 1px solid var(--bg-primary-500);
+        background-color: var(--bg-primary-300);
         padding: 3px 8px;
         border-radius: 5px;
         margin-bottom: 20px;
-        box-shadow: 1px 1px $bg-black;
+        box-shadow: 1px 1px var(--bg-black);
 
         &:hover {
-          background-color: $bg-primary;
-          box-shadow: 0 0 $bg-black;
-          border: 2px solid $bg-primary-500;
+          background-color: var(--bg-primary);
+          box-shadow: 0 0 var(--bg-black);
+          border: 2px solid var(--bg-primary-500);
           font-weight: bold;
 
           a {
-            color: $bg-primary-300;
+            color: var(--bg-primary-300);
           }
         }
         a {
           text-decoration: none;
-          color: $bg-primary;
+          color: var(--bg-primary);
         }
       }
     }

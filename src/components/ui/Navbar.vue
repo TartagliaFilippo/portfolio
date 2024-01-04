@@ -4,6 +4,7 @@ export default {
     return {
       isSticky: false,
       lastScrollTop: 0,
+      selectedTheme: "default",
     };
   },
 
@@ -28,6 +29,106 @@ export default {
       }
 
       this.lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    },
+
+    changeTheme() {
+      if (this.selectedTheme === "default") {
+        document.documentElement.style.setProperty("--bg-primary", "#eeeae2");
+        document.documentElement.style.setProperty(
+          "--bg-primary-100",
+          "#c7a991"
+        );
+        document.documentElement.style.setProperty(
+          "--bg-primary-300",
+          "#6f482a"
+        );
+        document.documentElement.style.setProperty(
+          "--bg-primary-500",
+          "#4a301c"
+        );
+        document.documentElement.style.setProperty("--bg-grey", "#707070");
+        document.documentElement.style.setProperty("--bg-black", "#181818");
+        document.documentElement.style.setProperty("--cl-link", "#8cb0d9");
+        document.documentElement.style.setProperty(
+          "--cl-link-hover",
+          "#0c3ea1"
+        );
+        document.documentElement.style.setProperty(
+          "--cl-main-title",
+          "#d23902"
+        );
+        document.documentElement.style.setProperty("--cl-text", "#3b3535");
+        document.documentElement.style.setProperty("--cl-title", "#bb5f02");
+        document.documentElement.style.setProperty(
+          "--cl-footer-text",
+          "#dfdedefd"
+        );
+        document.documentElement.style.setProperty("--flash-color", "#ff9a00");
+      } else if (this.selectedTheme === "green") {
+        document.documentElement.style.setProperty("--bg-primary", "#f2f5f4");
+        document.documentElement.style.setProperty(
+          "--bg-primary-100",
+          "#bae5b3"
+        );
+        document.documentElement.style.setProperty(
+          "--bg-primary-300",
+          "#024541"
+        );
+        document.documentElement.style.setProperty(
+          "--bg-primary-500",
+          "#012d32"
+        );
+        document.documentElement.style.setProperty("--bg-grey", "#707070");
+        document.documentElement.style.setProperty("--bg-black", "#181818");
+        document.documentElement.style.setProperty("--cl-link", "#8cb0d9");
+        document.documentElement.style.setProperty(
+          "--cl-link-hover",
+          "#0c3ea1"
+        );
+        document.documentElement.style.setProperty(
+          "--cl-main-title",
+          "#d23902"
+        );
+        document.documentElement.style.setProperty("--cl-text", "#536250");
+        document.documentElement.style.setProperty("--cl-title", "#e5b3b9");
+        document.documentElement.style.setProperty(
+          "--cl-footer-text",
+          "#dfdedefd"
+        );
+        document.documentElement.style.setProperty("--flash-color", "#ff9a00");
+      } else if (this.selectedTheme === "cyber") {
+        document.documentElement.style.setProperty("--bg-primary", "#101b37");
+        document.documentElement.style.setProperty(
+          "--bg-primary-100",
+          "#101b37"
+        );
+        document.documentElement.style.setProperty(
+          "--bg-primary-300",
+          "#4b4bfb"
+        );
+        document.documentElement.style.setProperty(
+          "--bg-primary-500",
+          "#01c7ef"
+        );
+        document.documentElement.style.setProperty("--bg-grey", "#707070");
+        document.documentElement.style.setProperty("--bg-black", "#ae0ab9");
+        document.documentElement.style.setProperty("--cl-link", "#8cb0d9");
+        document.documentElement.style.setProperty(
+          "--cl-link-hover",
+          "#0c3ea1"
+        );
+        document.documentElement.style.setProperty(
+          "--cl-main-title",
+          "#017f98"
+        );
+        document.documentElement.style.setProperty("--cl-text", "#fff");
+        document.documentElement.style.setProperty("--cl-title", "#bb5f02");
+        document.documentElement.style.setProperty(
+          "--cl-footer-text",
+          "#017f98"
+        );
+        document.documentElement.style.setProperty("--flash-color", "#ff9a00");
+      }
     },
   },
 };
@@ -76,9 +177,16 @@ export default {
               <font-awesome-icon :icon="['fas', 'gear']" />
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">first color</a></li>
-              <li><a class="dropdown-item" href="#">second color</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <select
+                v-model="selectedTheme"
+                @change="changeTheme"
+                name="change-theme"
+                id="change-theme"
+              >
+                <option value="default">Default Theme</option>
+                <option value="green">Green Theme</option>
+                <option value="cyber">Cyber Theme</option>
+              </select>
             </ul>
           </li>
         </ul>
@@ -93,41 +201,41 @@ export default {
   top: 0;
   left: 0;
   right: 0;
-  background-color: $bg-primary-300;
+  background-color: var(--bg-primary-300);
 }
 .navbar-sticky {
   position: sticky;
   top: 0;
   z-index: 10;
-  background-color: $bg-primary-300;
+  background-color: var(--bg-primary-300);
 }
 .navbar-brand {
-  color: $bg-primary;
+  color: var(--bg-primary);
 
   &:hover {
-    color: $flash-color;
+    color: var(--flash-color);
     //box-shadow: inset 0px -5px 0px 0px $cl-main-title;
-    text-shadow: -1px 1px $cl-main-title;
+    text-shadow: -1px 1px var(--cl-main-title);
   }
 }
 
 .nav-link {
-  color: $bg-primary;
+  color: var(--bg-primary);
 
   &:hover {
-    box-shadow: inset 0px -5px 0px 0px $bg-primary;
+    box-shadow: inset 0px -5px 0px 0px var(--bg-primary);
   }
 }
 .navbar-toggler {
-  color: $bg-primary;
-  border: 1px solid $bg-primary;
+  color: var(--bg-primary);
+  border: 1px solid var(--bg-primary);
 }
 
 .nav-link.dropdown-toggle {
   transition: transform 0.3s ease;
   &:hover {
     transform: rotate(360deg);
-    box-shadow: inset 0px 0px 0px 0px $bg-primary;
+    box-shadow: inset 0px 0px 0px 0px var(--bg-primary);
   }
 }
 .dropdown-toggle::after {

@@ -87,18 +87,18 @@ export default {
     align-items: center;
 
     .button-slide {
-      border: 1px solid $bg-primary-500;
-      background-color: $bg-primary-300;
+      border: 1px solid var(--bg-primary-500);
+      background-color: var(--bg-primary-300);
       border-radius: 3px;
       padding: 2px 10px;
-      color: $bg-primary;
+      color: var(--bg-primary);
       cursor: pointer;
 
       &:hover {
-        background-color: $bg-primary;
-        color: $bg-primary-300;
+        background-color: var(--bg-primary);
+        color: var(--bg-primary-300);
         font-weight: bold;
-        border: 2px solid $bg-primary-500;
+        border: 2px solid var(--bg-primary-500);
       }
     }
     .thumb-nails {
@@ -110,10 +110,10 @@ export default {
         height: 1rem;
         width: 1rem;
         border-radius: 50%;
-        background-color: $bg-grey;
+        background-color: var(--bg-grey);
 
         &.active {
-          background-color: $bg-primary-500;
+          background-color: var(--bg-primary-500);
         }
       }
     }

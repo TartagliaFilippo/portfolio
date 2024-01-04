@@ -1,14 +1,15 @@
-$bg-primary: #eeeae2;
-$bg-primary-100: #c7a991;
-$bg-primary-300: #6f482a;
-$bg-primary-500: #4a301c;
-$bg-grey: #707070;
-$bg-black: #181818;
-//$bg-white: #f6f6f6fd;
-$cl-link: #8cb0d9;
-$cl-link-hover: #0c3ea1;
-$cl-main-title: #d23902;
-$cl-text: #3b3535;
-$cl-title: #bb5f02;
-$cl-footer-text: #dfdedefd;
-$flash-color: #ff9a00;
+:root {
+  --bg-primary: #eeeae2;
+  --bg-primary-100: #c7a991;
+  --bg-primary-300: #6f482a;
+  --bg-primary-500: #4a301c;
+  --bg-grey: #707070;
+  --bg-black: #181818;
+  --cl-link: #8cb0d9;
+  --cl-link-hover: #0c3ea1;
+  --cl-main-title: #d23902;
+  --cl-text: #3b3535;
+  --cl-title: #bb5f02;
+  --cl-footer-text: #dfdedefd;
+  --flash-color: #ff9a00;
+}

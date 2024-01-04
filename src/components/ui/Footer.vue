@@ -48,8 +48,8 @@ export default {
 <style lang="scss" scoped>
 @use "../../assets/scss/variables.scss" as *;
 .wrapper {
-  background-color: $bg-black;
-  color: $cl-footer-text;
+  background-color: var(--bg-black);
+  color: var(--cl-footer-text);
   padding-top: 10px;
 
   .footer-body {
@@ -64,10 +64,10 @@ export default {
       gap: 20px;
 
       a {
-        color: $cl-link;
+        color: var(--cl-link);
 
         &:hover {
-          color: $cl-link-hover;
+          color: var(--cl-link-hover);
         }
       }
     }

@@ -66,11 +66,17 @@ export default {
             "deliveboo-3.png",
             "deliveboo-4.png",
             "deliveboo-5.png",
+            "deliveboo-6.png",
+            "deliveboo-7.png",
+            "deliveboo-8.png",
+            "deliveboo-9.png",
+            "deliveboo-10.png",
+            "deliveboo-11.png",
           ],
           description:
             "Come culmine del mio corso con Boolean, ho sviluppato un'applicazione completa, suddivisa tra front end e back end, che offre un'esperienza coinvolgente sia agli utenti registrati che a quelli non registrati. L'applicazione è stata progettata per permettere agli utenti di registrarsi sulla piattaforma e creare i propri ristoranti con una vasta gamma di piatti. La componente back end è stata sviluppata per gestire l'interazione con un database MySQL, dove i dati degli utenti, dei ristoranti e dei piatti vengono memorizzati in modo sicuro e strutturato. Utilizzando API, questi dati vengono forniti al front end, consentendo agli utenti di non registrarsi di effettuare ordini in modo semplice e intuitivo. Uno degli aspetti salienti è stata l'implementazione di un sistema di pagamento tramite Braintree, che offre agli utenti una modalità sicura e affidabile per gestire le transazioni finanziarie. Per gli utenti registrati, ho integrato funzionalità aggiuntive, come la visualizzazione dell'andamento delle vendite tramite grafici realizzati con Chart.js.",
           technologies: ["HTML", "SCSS", "Laravel 9", "Vue 3", "JavaScript"],
-          link: "",
+          link: "https://github.com/TartagliaFilippo/my-project-deliveboo-back/settings",
         },
       ],
     };

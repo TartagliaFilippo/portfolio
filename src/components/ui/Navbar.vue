@@ -31,6 +31,21 @@ export default {
       this.lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
     },
 
+    changeToDefault() {
+      this.selectedTheme = "default";
+      this.changeTheme();
+    },
+
+    changeToGreen() {
+      this.selectedTheme = "green";
+      this.changeTheme();
+    },
+
+    changeToCyber() {
+      this.selectedTheme = "cyber";
+      this.changeTheme();
+    },
+
     changeTheme() {
       if (this.selectedTheme === "default") {
         document.documentElement.style.setProperty("--bg-primary", "#eeeae2");
@@ -97,7 +112,7 @@ export default {
         );
         document.documentElement.style.setProperty("--flash-color", "#ff9a00");
       } else if (this.selectedTheme === "cyber") {
-        document.documentElement.style.setProperty("--bg-primary", "#101b37");
+        document.documentElement.style.setProperty("--bg-primary", "#2f4d98");
         document.documentElement.style.setProperty(
           "--bg-primary-100",
           "#101b37"
@@ -177,16 +192,9 @@ export default {
               <font-awesome-icon :icon="['fas', 'gear']" />
             </a>
             <ul class="dropdown-menu">
-              <select
-                v-model="selectedTheme"
-                @change="changeTheme"
-                name="change-theme"
-                id="change-theme"
-              >
-                <option value="default">Default Theme</option>
-                <option value="green">Green Theme</option>
-                <option value="cyber">Cyber Theme</option>
-              </select>
+              <li><a href="#" @click="changeToDefault">Default Theme</a></li>
+              <li><a href="#" @click="changeToGreen">Green Theme</a></li>
+              <li><a href="#" @click="changeToCyber">Cyber Theme</a></li>
             </ul>
           </li>
         </ul>
@@ -244,5 +252,14 @@ export default {
 
 .dropdown-menu[data-bs-popper] {
   left: -135px;
+  background-color: var(--bg-primary-100);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    text-decoration: none;
+  }
 }
 </style>

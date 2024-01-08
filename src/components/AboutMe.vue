@@ -26,8 +26,8 @@ export default {
     >
       <defs>
         <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="0" y2="0">
-          <stop stop-color="#c7a991" offset="0%" />
-          <stop stop-color="#c7a991" offset="100%" />
+          <stop stop-color="#00000" offset="0%" />
+          <stop stop-color="#00000" offset="100%" />
         </linearGradient>
       </defs>
       <path
@@ -70,8 +70,8 @@ export default {
     >
       <defs>
         <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="0" y2="0">
-          <stop stop-color="#c7a991" offset="0%" />
-          <stop stop-color="#c7a991" offset="100%" />
+          <stop stop-color="#00000" offset="0%" />
+          <stop stop-color="#00000" offset="100%" />
         </linearGradient>
       </defs>
       <path

@@ -132,25 +132,37 @@ export default {
   .card-project {
     display: flex;
     align-items: stretch;
+    flex-direction: column;
     padding-bottom: 1rem;
     margin: 1rem;
     border-bottom: 1px dashed var(--bg-grey);
 
-    &:nth-child(odd) {
-      flex-direction: row;
+    @media screen and (min-width: 900px) {
+      &:nth-child(odd) {
+        flex-direction: row;
+      }
+
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+      }
     }
 
-    &:nth-child(even) {
-      flex-direction: row-reverse;
-    }
     .image-section {
-      width: 40%;
+      width: 100%;
       display: flex;
       align-items: center;
+
+      @media screen and (min-width: 900px) {
+        width: 40%;
+      }
     }
     .content-section {
-      width: 60%;
+      width: 100%;
       padding: 0 5px;
+
+      @media screen and (min-width: 900px) {
+        width: 60%;
+      }
 
       h3 {
         color: var(--cl-title);

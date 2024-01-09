@@ -3,7 +3,7 @@ export default {
   data() {
     return {
       currentIndex: 0,
-      pathImage: "../../../public/images-screen/",
+      pathImage: "images-screen/",
     };
   },
 

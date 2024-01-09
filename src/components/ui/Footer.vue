@@ -16,7 +16,7 @@ export default {
         },
         {
           name: "Gmail",
-          link: "pippotartaglia@gmail.com",
+          link: "mailto:pippotartaglia@gmail.com",
           icon: "google",
         },
       ],

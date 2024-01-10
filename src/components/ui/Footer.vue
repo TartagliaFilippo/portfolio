@@ -30,14 +30,14 @@ export default {
     <div class="container">
       <h4>I miei link di contatto:</h4>
       <div class="footer-body">
-        <div class="links-container">
+        <div class="links-container my-2">
           <div v-for="(link, index) in links" :key="index">
             <a :href="link.link" target="_blank">
               <font-awesome-icon :icon="['fab', link.icon]" />
             </a>
           </div>
         </div>
-        <div class="support">
+        <div class="support my-2">
           <p>© designed & built by Filippo Tartaglia</p>
         </div>
       </div>
@@ -55,8 +55,12 @@ export default {
   .footer-body {
     padding: 20px 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
+
+    @media screen and (min-width: 450px) {
+      flex-direction: row;
+    }
 
     .links-container {
       display: flex;

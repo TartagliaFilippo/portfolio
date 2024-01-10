@@ -15,10 +15,10 @@ export default {
 
     const desiredHeight = window.innerHeight * 0.64;
 
-    // Applica l'altezza desiderata all'elemento .absolute-gradient dopo un piccolo ritardo per consentire la transizione
+    // Applica l'altezza desiderata all'elemento
     setTimeout(() => {
       gradientElement.style.height = `${desiredHeight}px`;
-    }, 100); // Puoi modificare il ritardo se necessario per ottenere l'effetto desiderato
+    }, 400);
   },
 };
 </script>
@@ -32,8 +32,8 @@ export default {
           <span class="author-name">Filippo Tartaglia</span>
           <h1 class="title">Full Stack Web Developer</h1>
           <h2 class="subtitle">
-            <p>Architetto Digitale:</p>
-            <p>Costruendo il Futuro, Linea di Codice per Linea di Successo</p>
+            <p>Creatore Web:</p>
+            <p>Progettazione Intuitiva per Esperienze Coinvolgenti</p>
           </h2>
         </div>
         <div class="scroll-button">
@@ -118,7 +118,7 @@ export default {
         }
         @keyframes changeColor {
           0% {
-            color: var(--bg-grey);
+            color: var(--bg-white);
           }
           100% {
             color: var(--bg-primary);

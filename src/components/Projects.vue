@@ -98,7 +98,7 @@ export default {
         del mio percorso
       </p>
       <div v-for="project in projects" :key="project.id" class="card-project">
-        <div class="image-section">
+        <div class="image-section my-4">
           <Carousel :images="project.images" />
         </div>
         <div class="content-section">

@@ -78,6 +78,21 @@ export default {
           technologies: ["HTML", "SCSS", "Laravel 9", "Vue 3", "JavaScript"],
           link: "https://github.com/TartagliaFilippo/my-project-deliveboo-back",
         },
+        {
+          id: 6,
+          name: "Maniglie Tartaglia",
+          images: [
+            "maniglie-1.png",
+            "maniglie-2.png",
+            "maniglie-3.png",
+            "maniglie-4.png",
+            "maniglie-5.png",
+          ],
+          description:
+            "Con l'obiettivo di migliorare la presenza online dell'attività di mio padre, ho intrapreso il progetto di aggiornare il sito vetrina esistente. Come framework principale per lo sviluppo frontend, ho scelto Vue 3 per la sua flessibilità e potenza nello sviluppo di interfacce utente dinamiche e reattive. Ho integrato JavaScript per automatizzare alcune funzionalità chiave del sito, tra cui il carosello delle immagini e la gestione della navbar. Per rendere il sito accessibile online, ho effettuato il deploy utilizzando Netlify. Uno degli aspetti cruciali del mio lavoro è stato garantire la sicurezza del sito vetrina. Per farlo, ho configurato il sito per utilizzare protocolli sicuri come HTTPS. Attraverso Netlify, ho associato i servername al dominio Aruba, consentendo al sito di beneficiare della crittografia SSL/TLS e garantendo la protezione delle informazioni degli utenti durante le interazioni online.",
+          technologies: ["HTML", "SCSS", "Vue 3", "JavaScript"],
+          link: "https://maniglietartaglia.it/",
+        },
       ],
     };
   },

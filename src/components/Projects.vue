@@ -210,7 +210,7 @@ export default {
         &:hover {
           background-color: var(--bg-primary);
           box-shadow: 0 0 var(--bg-black);
-          border: 2px solid var(--bg-primary-500);
+          // border: 2px solid var(--bg-primary-500);
           font-weight: bold;
 
           a {

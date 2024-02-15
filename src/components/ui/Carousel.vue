@@ -98,7 +98,7 @@ export default {
         background-color: var(--bg-primary);
         color: var(--bg-primary-300);
         font-weight: bold;
-        border: 2px solid var(--bg-primary-500);
+        // border: 2px solid var(--bg-primary-500);
       }
     }
     .thumb-nails {
